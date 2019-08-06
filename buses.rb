@@ -19,12 +19,15 @@ class Bus
   end
 
   def pick_up_passenger(person)
-    @passengers.push(person.name)
+    binding.pry
+    @passengers.push(person)
+    p @passengers
   end
 
-  def drop_off_passenger(person)
-    @passengers.unshift(person.name)
-  end
+  # Some issues with this at present
+  # def drop_off_passenger(person)
+  #   @passengers.unshift(person)
+  # end
 
   def empty_bus
     @passengers.clear
