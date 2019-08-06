@@ -24,10 +24,19 @@ class Bus
     p @passengers
   end
 
-  # Some issues with this at present
-  # def drop_off_passenger(person)
-  #   @passengers.unshift(person)
-  # end
+  def drop_off_passenger(person)
+    for passenger in @passengers
+      if person == passenger
+        passenger.unshift
+      else
+        nil
+      end
+    end
+  end
+
+  def drop_off_passenger(person)
+    @passengers.unshift(person)
+  end
 
   def empty_bus
     @passengers.clear
