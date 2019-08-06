@@ -1,14 +1,14 @@
-class Busstop
+class BusStop
 
-  attr_reader :route_number, :destination
-  attr_accessor :passengers
+  attr_accessor :queue, :name
 
-  def initialize(person)
-    @person = person
+  def initialize(name)
+    @name = name
     @queue = []
   end
 
-def bus_stop_has_name
-  return bus_stop_has_name
+  def add_person_to_queue(person)
+    @queue.push(person)
+  end
 
 end
